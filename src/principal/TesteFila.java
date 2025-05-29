@@ -8,20 +8,20 @@ import javax.swing.JOptionPane;
  *
  * @author Lorenzo
  */
-public class TestePilha {
+public class TesteFila {
     public static void main(String[] args) {
         Stack<Aluno> pilha = new Stack<>();
 
         int opcao;
         do {
             opcao = Integer.parseInt(JOptionPane.showInputDialog(
-                "------ MENU PILHA ------\n" +
-                "1 - Adicionar Aluno (Push)\n" +
-                "2 - Remover do Topo (Pop)\n" +
-                "3 - Mostrar Topo (Peek)\n" +
-                "4 - Listar Pilha\n" +
-                "5 - Procurar Aluno (Search)\n" +
-                "6 - Verificar se Pilha está Vazia\n" +
+                "------ MENU FILA ------\n" +
+                "1 - Adicionar aluno (Push)\n" +
+                "2 - Remover do topo (Pop)\n" +
+                "3 - Mostrar topo (Peek)\n" +
+                "4 - Listar fila\n" +
+                "5 - Procurar aluno (Search)\n" +
+                "6 - Verificar se fila está Vazia\n" +
                 "0 - Sair\n" +
                 "-------------------------\n" +
                 "Escolha uma opção:"
@@ -37,7 +37,7 @@ public class TestePilha {
 
                     Aluno novoAluno = new Aluno(id, nome, idade, curso, fase);
                     pilha.push(novoAluno);
-                    JOptionPane.showMessageDialog(null, "Aluno adicionado na pilha.");
+                    JOptionPane.showMessageDialog(null, "Aluno adicionado na fila.");
                     break;
 
                 case 2:
@@ -45,16 +45,16 @@ public class TestePilha {
                         Aluno removido = pilha.pop();
                         JOptionPane.showMessageDialog(null, "Removido do topo: " + removido.getNome());
                     } else {
-                        JOptionPane.showMessageDialog(null, "A pilha está vazia.");
+                        JOptionPane.showMessageDialog(null, "A fila está vazia.");
                     }
                     break;
 
                 case 3:
                     if (!pilha.isEmpty()) {
                         Aluno topo = pilha.peek();
-                        JOptionPane.showMessageDialog(null, "Topo da pilha: " + topo.getNome());
+                        JOptionPane.showMessageDialog(null, "Topo da fila: " + topo.getNome());
                     } else {
-                        JOptionPane.showMessageDialog(null, "A pilha está vazia.");
+                        JOptionPane.showMessageDialog(null, "A fila está vazia.");
                     }
                     break;
 
@@ -65,9 +65,9 @@ public class TestePilha {
                             lista.append(a.getId()).append(" - ")
                                  .append(a.getNome()).append("\n");
                         }
-                        JOptionPane.showMessageDialog(null, "Conteúdo da Pilha:\n" + lista.toString());
+                        JOptionPane.showMessageDialog(null, "Conteúdo da fila:\n" + lista.toString());
                     } else {
-                        JOptionPane.showMessageDialog(null, "A pilha está vazia.");
+                        JOptionPane.showMessageDialog(null, "A fila está vazia.");
                     }
                     break;
 
@@ -84,18 +84,18 @@ public class TestePilha {
                         if (posicao != -1) {
                             JOptionPane.showMessageDialog(null, "O aluno está na posição: " + posicao + " (1 é o topo)");
                         } else {
-                            JOptionPane.showMessageDialog(null, "Aluno não encontrado na pilha.");
+                            JOptionPane.showMessageDialog(null, "Aluno não encontrado na fila.");
                         }
                     } else {
-                        JOptionPane.showMessageDialog(null, "A pilha está vazia.");
+                        JOptionPane.showMessageDialog(null, "A fila está vazia.");
                     }
                     break;
 
                 case 6:
                     if (pilha.empty()) {
-                        JOptionPane.showMessageDialog(null, "A pilha está vazia.");
+                        JOptionPane.showMessageDialog(null, "A fila está vazia.");
                     } else {
-                        JOptionPane.showMessageDialog(null, "A pilha NÃO está vazia.");
+                        JOptionPane.showMessageDialog(null, "A fila NÃO está vazia.");
                     }
                     break;
 
