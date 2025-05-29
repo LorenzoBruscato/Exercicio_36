@@ -3,6 +3,10 @@ package model;
 import dao.AlunoDAO;
 import java.util.ArrayList;
 
+/**
+ *
+ * @author Lorenzo
+ */
 public class Aluno extends Pessoa {
 
     private String curso;
