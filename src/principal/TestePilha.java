@@ -4,6 +4,10 @@ import model.Aluno;
 import java.util.*;
 import javax.swing.JOptionPane;
 
+/**
+ *
+ * @author Lorenzo
+ */
 public class TestePilha {
     public static void main(String[] args) {
         Stack<Aluno> pilha = new Stack<>();
