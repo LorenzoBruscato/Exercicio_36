@@ -3,6 +3,10 @@ package dao;
 import model.Aluno;
 import java.util.ArrayList;
 
+/**
+ *
+ * @author Lorenzo
+ */
 public class AlunoDAO {
     private static ArrayList<Aluno> minhaLista = new ArrayList<>();
 
